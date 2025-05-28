@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فاتورة حرارية</title>
+  <style>
+    @page {
+      size: 80mm auto;
+      margin: 0;
+    }
+
+    html, body {
+      width: 80mm;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      font-size: 12px;
+      direction: rtl;
+    }
+
+    .invoice {
+      width: 100%;
+      padding: 5px 10px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .info {
+      margin-bottom: 10px;
+      text-align: right;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 5px;
+      text-align: center;
+    }
+
+    .totals {
+      margin-top: 10px;
+    }
+
+    .totals div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+
+    .qr {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .qr img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .test-button {
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    .test-button button {
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice">
+    <h2>TEST</h2>
+    <h3>SIMPLE TAX ضريبة مبسطة</h3>
+    <div class="info">
+      <div>رقم الفاتورة: SALI-0000001584</div>
+      <div>مؤسسة تسجيل الاتصالات وتقنية المعلومات</div>
+      <div>الفرع: الرئيسي</div>
+      <div>السعودية - سلطانة</div>
+      <div>السجل التجاري: 312443697400003</div>
+      <div>الرقم الضريبي: 312443697400003</div>
+      <div>التاريخ: 28-05-2025 15:06:07</div>
+      <div>أمين الصندوق: zifteen</div>
+      <div>العميل: عميل نقاط بيع - الرياض</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>اسم المنتج</th>
+          <th>الكمية</th>
+          <th>سعر الوحدة</th>
+          <th>المجموع بعد VAT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>محدد شامل قبل الخصم</td>
+          <td>1</td>
+          <td>120</td>
+          <td>120</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div><span>Sub Total \ الإجمالي قبل الضريبة:</span><span>﷼ 104.35</span></div>
+      <div><span>Discount \ الخصم:</span><span>﷼ 0</span></div>
+      <div><span>الضريبة:</span><span>﷼ 15.65</span></div>
+      <div><strong>Total \ الإجمالي:</strong><strong>﷼ 120</strong></div>
+      <div><span>Payment methods \ طرق الدفع:</span><span>بطاقة ﷼ 120</span></div>
+    </div>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=SALI-0000001584" alt="QR">
+    </div>
+
+  </div>
+</body>
+</html>
